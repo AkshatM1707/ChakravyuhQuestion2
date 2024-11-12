@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Shield, Github, Terminal, Cpu, Binary, Flag, Lock } from 'lucide-react'
+import { Shield, Github, Terminal, Cpu, Binary, Lock } from 'lucide-react'
 
 const BinaryBattlefieldComponent = () => {
   const [glitchText, setGlitchText] = useState("BHISHMA'S BINARY BATTLEFIELD")
@@ -17,7 +17,35 @@ const BinaryBattlefieldComponent = () => {
   }, [])
 
   return (
-    <div className="min-h-screen bg-black text-green-500 font-mono p-4 md:p-8">
+    <div className="min-h-screen bg-black text-green-500 font-mono p-4 md:p-8 relative">
+      {/* Online Tools Corner Section */}
+      <div className="fixed top-4 right-4 bg-gray-900 p-4 rounded-lg shadow-lg border border-green-500">
+        <h3 className="text-lg font-semibold text-green-400 mb-2">Online Tools</h3>
+        <ul className="space-y-1">
+          <li>
+            <a
+              href="https://netdis.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-400 underline"
+            >
+              NetDis (Binary Analysis)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://dogbolt.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-400 underline"
+            >
+              Dogbolt
+            </a>
+          </li>
+          
+        </ul>
+      </div>
+
       <header className="text-center mb-12">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 relative">
           <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
@@ -52,7 +80,7 @@ const BinaryBattlefieldComponent = () => {
                 <Binary className="mr-2" /> Decode the Binary
               </h3>
               <p className="text-sm text-gray-300">
-                Analyze the program using Ghidra or IDA. Despite stripped headers, with IDA’s
+                Analyze the program using Ghidra,Hex-Arrays or IDA. Despite stripped headers, with IDA’s
                 powerful insights, track the binary structure to decode usernames and passwords.
               </p>
             </div>
